@@ -1,0 +1,143 @@
+/* ============================================================
+   THEME TOKENS — change these five values to re-theme the site.
+   The apricot is a nod to home; swap it if it's not you.
+   ============================================================ */
+:root {
+  --paper:  #f3f5f8;   /* page background */
+  --ink:    #151a2d;   /* main text */
+  --muted:  #5c6478;   /* secondary text */
+  --accent: #6c1af0;   /* apricot — links, ball, highlights */
+  --line:   #d8dce6;   /* hairlines and borders */
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+/* ---------- layout ---------- */
+.hero, main, footer {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.hero { padding-top: 5rem; }
+
+section, footer { margin-top: 4.5rem; }
+
+footer {
+  padding-bottom: 4rem;
+  border-top: 1px solid var(--line);
+  padding-top: 2rem;
+}
+
+/* ---------- type ---------- */
+h1, h2, h3 {
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  line-height: 1.1;
+  margin: 0 0 0.75rem;
+}
+
+h1 { font-size: clamp(2.6rem, 8vw, 4rem); font-weight: 700; letter-spacing: -0.02em; }
+h3 { font-size: 1.35rem; font-weight: 700; }
+
+.eyebrow {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+
+.tagline {
+  font-size: 1.15rem;
+  max-width: 34rem;
+  color: var(--muted);
+}
+
+/* ---------- links ---------- */
+a { color: var(--ink); text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+a:hover { color: var(--accent); }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+/* ---------- hero canvas ---------- */
+#bricks {
+  display: block;
+  width: 100%;
+  height: 200px;
+  margin-top: 2.5rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.canvas-caption {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 0.6rem;
+}
+
+/* ---------- projects ---------- */
+.project {
+  border-top: 1px solid var(--line);
+  padding: 1.5rem 0;
+}
+
+.project:last-of-type { border-bottom: 1px solid var(--line); }
+
+.project-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.project p { margin: 0.25rem 0 0.75rem; color: var(--muted); }
+
+.stack {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  color: var(--muted) !important;
+  white-space: nowrap;
+}
+
+.project-link { font-weight: 600; }
+
+/* ---------- skills ---------- */
+.tags {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tags li {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.82rem;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+}
+
+.fine { font-size: 0.85rem; color: var(--muted); }
+
+/* ---------- small screens ---------- */
+@media (max-width: 480px) {
+  .hero { padding-top: 3rem; }
+  #bricks { height: 160px; }
+}

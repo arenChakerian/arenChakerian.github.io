@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aren Chakerian — Portfolio</title>
+  <meta name="description" content="Aren Chakerian — computer science student building games and tools in C++." />
+
+  <!-- Display font. Body text uses your system font (fast, no download). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <p class="eyebrow">Sun Valley, CA</p>
+    <h1>Aren Chakerian</h1>
+    <p class="tagline">
+      Computer science student working with C++, python, and java.
+      Currently at Pasadena City College, transferring to a four-year CS program in 2027.
+    </p>
+
+    <!-- The signature: a self-playing brick-breaker, a nod to Poccer.
+         All the logic lives in game.js — open it, break it, tweak it. -->
+    <canvas id="bricks" aria-label="A small self-playing brick-breaker animation" role="img"></canvas>
+    <p class="canvas-caption">This little brick-breaker runs on ~90 lines of JavaScript. <a href="game.js">Read the source.</a></p>
+  </header>
+
+  <main>
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects">
+      <h2><span class="eyebrow">Projects</span></h2>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>Poccer</h3>
+          <p class="stack">C++ · SFML</p>
+        </div>
+        <p>
+          A soccer-themed brick-breaker built on an SFML-based engine: game loop, collision
+          detection, scoring, and win/loss states. Presented to my class with a live demo.
+        </p>
+        <!-- TODO: push the code to GitHub and swap this href for the repo link -->
+        <a class="project-link" href="#">Source code →</a>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>RPN Calculator</h3>
+          <p class="stack">C++</p>
+        </div>
+        <p>
+          Parses infix math expressions with the Shunting Yard algorithm, converts them to
+          Reverse Polish Notation, and evaluates them on a custom stack.
+        </p>
+        <!-- TODO: repo link -->
+        <a class="project-link" href="#">Source code →</a>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>Data Structures Library</h3>
+          <p class="stack">C++ · Templates</p>
+        </div>
+        <p>
+          A templated dynamic array and linked list written from scratch, with Stack and Queue
+          implemented on top. Manual memory management, operator overloading, the works.
+        </p>
+        <!-- TODO: repo link -->
+        <a class="project-link" href="#">Source code →</a>
+      </article>
+
+      <!-- TODO: this site is your fourth project. Once it's deployed,
+           describe it here and link the repo. -->
+      <article class="project">
+        <div class="project-head">
+          <h3>This website</h3>
+          <p class="stack">HTML · CSS · JavaScript</p>
+        </div>
+        <p>
+          Hand-written, no frameworks. The bouncing bricks up top are a canvas animation
+          I ported from the ideas behind Poccer.
+        </p>
+        <a class="project-link" href="#">Source code →</a>
+      </article>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about">
+      <h2><span class="eyebrow">About</span></h2>
+      <p>
+        I study computer science at Pasadena City College and tutor math on the side.
+        Breaking down difficult tasks into easy steps is half of what I do all week,
+        and it turns out that's most of what programming is too.
+      </p>
+      <!-- TODO: make this yours. One or two sentences about what you're into:
+           game dev, Pokémon TCG, writing, whatever feels right. Keep it human. -->
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills">
+      <h2><span class="eyebrow">Toolbox</span></h2>
+      <ul class="tags">
+        <li>C++</li>
+        <li>OOP &amp; templates</li>
+        <li>Data structures</li>
+        <li>SFML</li>
+        <li>HTML / CSS / JS</li>
+        <!-- TODO: add or remove until every tag is honest -->
+      </ul>
+    </section>
+  </main>
+
+  <!-- ============ CONTACT ============ -->
+  <footer id="contact">
+    <h2><span class="eyebrow">Contact</span></h2>
+    <p>
+      <a href="mailto:achakerian1@gmail.com">achakerian1@gmail.com</a>
+      <!-- TODO: add your GitHub once it's live -->
+      · <a href="#">GitHub</a>
+    </p>
+    <p class="fine">Built by hand in Sun Valley, CA.</p>
+  </footer>
+
+  <script src="game.js"></script>
+</body>
+</html>
